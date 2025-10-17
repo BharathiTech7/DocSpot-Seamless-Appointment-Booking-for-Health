@@ -1,0 +1,140 @@
+{
+  "fullName": "John Doe",
+  "email": "john.doe@example.com",
+  "password": "password123",
+  "phone": "1234567890",
+  "type": "user"
+}
+||{
+    "message": "Login success successfully",
+    "success": true,
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NWQ4MmE4Nzc3OTcwNTRlZjA1OWY4YSIsImlhdCI6MTc1MDk1OTU3OSwiZXhwIjoxNzUxMDQ1OTc5fQ.GWYAxlEvuv9_YXLE5YWULcwe7zBK-TEt5dhGOr7fnbo",
+    "userData": {
+        "_id": "685d82a877797054ef059f8a",
+        "fullName": "John Doe",
+        "email": "john.doe@example.com",
+        "phone": "1234567890",
+        "type": "user",
+        "notification": [],
+        "seennotification": [],
+        "isdoctor": false,
+        "__v": 0
+    }
+}
+
+
+doctor john "{
+  "doctor": {
+    "fullName": "John Doe",
+    "email": "john.doe@example.com",
+    "phone": "9876543210",
+    "specialization": "Cardiology",
+    "experience": 10,
+    "timings": "9:00 AM - 5:00 PM",
+    "fees": 500
+  },
+  "userId": "685d82a877797054ef059f8a"
+}
+
+"
+
+
+
+
+
+
+
+
+
+
+
+
+{
+    "message": "Login success successfully",
+    "success": true,
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NWUxNmZlODUyYTQ5MDNkMTI1NDY4OSIsImlhdCI6MTc1MDk5NjgwMSwiZXhwIjoxNzUxMDgzMjAxfQ.VfjYe_itaFEwfChQ9t3MbztQ7qw64uXRg-XnWVSucsA",
+    "userData": {
+        "_id": "685e16fe852a4903d1254689",
+        "fullName": "Admin User",
+        "email": "admin@example.com",
+        "phone": "4000000000",
+        "type": "admin",
+        "notification": [],
+        "seennotification": [],
+        "isdoctor": false,
+        "__v": 0
+    }
+}
+
+
+
+
+{
+    "message": "Login success successfully",
+    "success": true,
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NWUxZjBmNGVlZjEyZWU2M2RjMWFiOCIsImlhdCI6MTc1MTAwNjQ3MSwiZXhwIjoxNzUxMDkyODcxfQ.x50Ppzoi9WvoEtgSnVuAmO3caZyTL3i8uigKtCUASBw",
+    "userData": {
+        "_id": "685e1f0f4eef12ee63dc1ab8",
+        "fullName": "Jaddu",
+        "email": "jaddu@example.com",
+        "phone": "2090242178",
+        "type": "user",
+        "notification": [],
+        "seennotification": [],
+        "isdoctor": false,
+        "__v": 0
+    }
+}
+
+
+
+{
+    "message": "Login success successfully",
+    "success": true,
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NWUxNjQ4ODUyYTQ5MDNkMTI1NDY4MyIsImlhdCI6MTc1MTAxMTc5MCwiZXhwIjoxNzUxMDk4MTkwfQ.l3rVpMwWL6tvgi8PF6KiVpOA1fDaYrkfSwc9fuzYQck",
+    "userData": {
+        "documents": [],
+        "_id": "685e1648852a4903d1254683",
+        "fullName": "Dhoni",
+        "email": "dhoni@example.com",
+        "phone": "2000000001",
+        "type": "user",
+        "notification": [
+            {
+                "type": "doctor-account-approved",
+                "message": "Your Doctor account has approved",
+                "onClickPath": "/notification"
+            }
+        ],
+        "seennotification": [],
+        "isdoctor": true,
+        "__v": 1
+    }
+}
+
+
+
+
+{
+    "message": "Login success successfully",
+    "success": true,
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NWUxNjhhODUyYTQ5MDNkMTI1NDY4NiIsImlhdCI6MTc1MTAyNDUzNSwiZXhwIjoxNzUxMTEwOTM1fQ.b4Uww0Aa5xidHyRtmEnqgJN3WWneqG7ejB49q9hlInY",
+    "userData": {
+        "_id": "685e168a852a4903d1254686",
+        "fullName": "Virat",
+        "email": "virat@example.com",
+        "phone": "3000000001",
+        "type": "user",
+        "notification": [
+            {
+                "type": "doctor-account-approved",
+                "message": "Your Doctor account has approved",
+                "onClickPath": "/notification"
+            }
+        ],
+        "seennotification": [],
+        "isdoctor": true,
+        "__v": 1,
+        "documents": []
+    }
+}

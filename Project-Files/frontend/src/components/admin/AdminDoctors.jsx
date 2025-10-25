@@ -12,7 +12,7 @@ const AdminDoctors = () => {
 
    const getDoctors = async () => {
       try {
-         const res = await axios.get('http://localhost:7000/api/admin/getalldoctors', {
+         const res = await axios.get('https://docspot-backend-8jk2.onrender.com/api/admin/getalldoctors', {
             headers: {
                Authorization: `Bearer ${localStorage.getItem("token")}`,
             },
@@ -29,7 +29,7 @@ const AdminDoctors = () => {
    const handleApprove = async (doctorId, status, userid) => {
       console.log(doctorId, status, userid)
       try {
-         const res = await axios.post('http://localhost:7000/api/admin/getapprove', { doctorId, status, userid }, {
+         const res = await axios.post('https://docspot-backend-8jk2.onrender.com/api/admin/getapprove', { doctorId, status, userid }, {
             headers: {
                Authorization: `Bearer ${localStorage.getItem("token")}`,
             },
@@ -48,7 +48,7 @@ const AdminDoctors = () => {
    const handleReject = async (doctorId, status, userid) => {
       console.log(doctorId, status, userid)
       try {
-         const res = await axios.post('http://localhost:7000/api/admin/getreject', { doctorId, status, userid }, {
+         const res = await axios.post('https://docspot-backend-8jk2.onrender.com/api/admin/getreject', { doctorId, status, userid }, {
             headers: {
                Authorization: `Bearer ${localStorage.getItem("token")}`,
             },

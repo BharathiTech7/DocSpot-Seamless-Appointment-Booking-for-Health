@@ -6,6 +6,13 @@ const DoctorHome = ({ userdata }) => {
   const [appointments, setAppointments] = useState([]);
   const [upcoming, setUpcoming] = useState(null);
 
+  useEffect(() => {
+  console.log("Appointments:", appointments);
+  console.log("Upcoming:", upcoming);
+  console.log("Userdata:", userdata);
+}, [appointments, upcoming, userdata]);
+
+
   const getDoctorAppointments = async () => {
     try {
       const res = await axios.get(

@@ -177,10 +177,59 @@ console.log("Constructed File Path:", absoluteFilePath);
   }
 };
 
+// ============ Doctor Dashboard Controller ============
+const getDoctorDashboardController = async (req, res) => {
+  try {
+    const doctor = await docSchema.findOne({ userId: req.user.id });
+
+    if (!doctor) {
+      return res.status(404).json({
+        success: false,
+        message: "Doctor profile not found",
+      });
+    }
+
+    const totalAppointments = await appointmentSchema.countDocuments({
+      doctorId: doctor._id,
+    });
+
+    const pendingAppointments = await appointmentSchema.countDocuments({
+      doctorId: doctor._id,
+      status: "pending",
+    });
+
+    const upcomingAppointment = await appointmentSchema
+      .findOne({
+        doctorId: doctor._id,
+        date: { $gte: new Date() },
+      })
+      .sort({ date: 1 })
+      .populate("userId", "fullName");
+
+    res.status(200).json({
+      success: true,
+      data: {
+        doctor,
+        totalAppointments,
+        pendingAppointments,
+        upcomingAppointment: upcomingAppointment || null,
+      },
+    });
+  } catch (error) {
+    console.log("Error in getDoctorDashboardController:", error);
+    res.status(500).json({
+      success: false,
+      message: "Something went wrong while fetching dashboard data",
+    });
+  }
+};
+
+
 
 module.exports = {
   updateDoctorProfileController,
   getAllDoctorAppointmentsController,
   handleStatusController,
   documentDownloadController,
+  getDoctorDashboardController, 
 };

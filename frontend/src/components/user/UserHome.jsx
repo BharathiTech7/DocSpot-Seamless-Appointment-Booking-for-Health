@@ -12,7 +12,7 @@ import { useLocation } from "react-router-dom";
 import ApplyDoctor from './ApplyDoctor';
 import UserAppointments from './UserAppointments';
 import DoctorList from './DoctorList';
-
+import DoctorHome from './DoctorHome'; // Adjust the path if needed
 const UserHome = () => {
    const [doctors, setDoctors] = useState([]);
    const [userdata, setUserData] = useState(null); // Initialize as null

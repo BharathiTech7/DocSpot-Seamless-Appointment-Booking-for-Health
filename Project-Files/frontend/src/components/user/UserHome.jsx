@@ -137,16 +137,15 @@ useEffect(() => {
                  {!['applyDoctor', 'notification', 'userappointments'].includes(activeMenuItem) && (
                    <>
                     {userdata.isdoctor ? (
-                     <DoctorHome userdata={userdata} />
-                              ) : (
-                            <Container>
-                    <h2 className="text-center p-2">Home</h2>
+                     <DoctorHome userdata={userdata}/>) : (
+                     <Container>
+                       <h2 className="text-center p-2">Home</h2>
                        <Row>
                          {doctors.map((doctor, i) => (
-                       <DoctorList userDoctorId={doctor.userId} doctor={doctor} userdata={userdata} key={i} />
+                           <DoctorList userDoctorId={doctor.userId} doctor={doctor} userdata={userdata} key={i} />
                           ))}
                       </Row>
-                   </Container>
+                      </Container>
                            )}
                        </>
                      )}

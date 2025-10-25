@@ -7,6 +7,7 @@ const {
   handleStatusController,
   documentDownloadController,
    getDoctorDashboardController,
+   getDoctorProfileController,
 } = require("../controllers/doctorC");
 
 const storage = multer.diskStorage({
@@ -40,6 +41,8 @@ router.get(
 );
 
 router.get("/dashboard", authMiddleware, getDoctorDashboardController);
+
+router.get("/getMyProfile", authMiddleware, getDoctorProfileController);
 
 
 module.exports = router;

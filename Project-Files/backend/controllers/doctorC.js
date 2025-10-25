@@ -3,6 +3,7 @@ const appointmentSchema = require("../schemas/appointmentModel");
 const userSchema = require("../schemas/userModel");
 const mongoose = require("mongoose");
 
+
 const fs = require("fs");
 const path = require('path');
 const updateDoctorProfileController = async (req, res) => {
@@ -224,6 +225,17 @@ const getDoctorDashboardController = async (req, res) => {
   }
 };
 
+const getDoctorProfileController = async (req, res) => {
+  try {
+    const doctor = await docSchema.findOne({ userId: req.user.id });
+    if (!doctor) {
+      return res.status(404).send({ success: false, message: "Doctor not found" });
+    }
+    res.status(200).send({ success: true, data: doctor });
+  } catch (error) {
+    res.status(500).send({ success: false, message: error.message });
+  }
+};
 
 
 module.exports = {
@@ -232,4 +244,5 @@ module.exports = {
   handleStatusController,
   documentDownloadController,
   getDoctorDashboardController, 
+  getDoctorProfileController,
 };
